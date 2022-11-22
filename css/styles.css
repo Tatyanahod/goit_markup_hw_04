@@ -57,7 +57,8 @@ padding-top: 94px;
 }
 .section.baner {
 text-align: center;
-padding: 200px 15px;
+margin-top: 0;
+padding-top: 0;
 }
 
 
@@ -113,7 +114,20 @@ color: var(--accent-color);
 .list-nav .link-current{
 color: var(--accent-color);
 }
-
+.baner{
+max-width: 1600px;
+height: 600px;
+margin-left: auto;
+margin-right: auto;
+background-color: #000000;
+background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
+url(../images/ban.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+padding-bottom: 200px;
+padding-top: 200px;
+}
 .titel-baner{
 margin-top: 0;
 margin-bottom: 30px;
@@ -155,7 +169,30 @@ width: 270px;
 .list-benefits li:last-child {
 margin-right: 0px;
 }
+.li-benefits::before{
+content:"";
+display: block;
+height: 120px;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+background-color: var(--secondary-background-color);
+border-radius: 4px;
 
+margin-bottom: 30px;
+}
+.li-benefits.icon-first::before{
+background-image: url(../images/Group.png);
+}
+.li-benefits.icon-second::before {
+    background-image: url(../images/clock.png);
+}
+.li-benefits.icon-third::before {
+    background-image: url(../images/diagram.png);
+}
+.li-benefits.icon-fourth::before {
+    background-image: url(../images/astronaut.png);
+}
 .titel-benefits {
 margin-top: 0;
 margin-bottom: 10px;
