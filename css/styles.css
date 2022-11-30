@@ -8,7 +8,7 @@
 --border-color: #EEEEEE;
 }
 .page{
-background-color: var(--primary-background-color);
+background-color: var(--white-text-color);
 font-family: 'Roboto', 'sans-serif';
 color: var(--primary-text-color);
 letter-spacing: 0.03em;
@@ -108,6 +108,9 @@ color: var(--dop-text-color);
 text-align: center;
 display: block;
 }
+.contacts li:hover, .contacts li:focus{
+fill: var(--accent-color);
+}
 .list-nav a:hover, .contacts a:hover, .list-nav a:focus, .contacts a:focus{
 color: var(--accent-color);
 fill: #2196F3;
@@ -161,33 +164,39 @@ border-radius: 6px;
 .list-benefits{
 margin-top: 0;
 display: flex;
-margin-bottom: 94px;
+
 }
 
-.list-benefits li:last-child {
-margin-right: 0px;
+.list-benefits li:not(:last-child){
+    margin-right: 30px;
+   
 }
+
 .list-benefits li{
-content:"";
-margin-right: 30px;
-    width: 270px;
-display: block;
+width: 270px;
+}
+.cont-benefits{
 height: 120px;
-background-size: contain;
-background-repeat: no-repeat;
-background-position: center;
-background-color: var(--secondary-background-color);
-border-radius: 4px;
-margin-bottom: 30px;
+width: 270px;
+content: "";
+    
+    
+    display: flex;
+  justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--secondary-background-color);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    align-items: center;
 }
 .benefits-icon{
-display: block;
-margin-left: auto;
-margin-right: auto;
+
+
 width: 70px;
 height: 70px;
-margin-bottom: 50px;
-margin-top: 25px;
+
 
 
 
@@ -224,7 +233,7 @@ text-align: center;
 }
 .list-activities-img{
 display: flex;
-margin-bottom: 82px;
+padding-bottom: 94px;
 }
 .list-activities-img li{
 display: block;
@@ -292,21 +301,20 @@ height: 44px;
 width: 44px;
 padding: 12px 12px;}
 .icon-mail{
-display: inline-block;
 margin-right: 10px;
 height: 12px;
 width: 16px;
-fill: var(--dop-text-color);
+fill: currentColor;
 }
 .icon-phone{
-display: inline-block;
+
 margin-right: 10px;
 height: 16px;
 width: 10px;
-fill: var(--dop-text-color);
+fill: currentColor;
 }
 
-.contacts svg:hover, .contacts svg:focus{
+.contacts a:hover, .contacts a:focus{
 fill: #2196F3;
 }
 .list-icon a:hover, .list-icon a:focus{
@@ -329,39 +337,50 @@ font-family: 'Roboto';
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-
+margin-top: 0;
     color: var(--primary-text-color);
+    margin-bottom: 50px;
 }
 .section.client{
-padding-top: 0;
-}
-.conteiner.client{
-padding-top: 0;
 padding-bottom: 94px;
+padding-top: 94px;
 }
+
 .list-client{
 display: flex;
-justify-content: space-around;
-margin-top: 94px;
-   
+justify-content: center;
+align-items: center;
 }
 
+.list-client li{
 
-.list-client svg{
-margin-left: 0;
-margin-right: 0;
-fill: #AFB1B8;
 height: 92px;
 width: 170px;
-padding: 16px 32px;
+}
+.list-client li:not(:last-child){
+margin-right: 30px;
+}
+.list-client a{
+width: 100%;
+height: 100%;
+color: #AFB1B8 ;
+display: flex;
+justify-content: center;
+align-items: center;
 border: 1px #AFB1B8 solid;
-    shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    border-radius: 4px;
+border-radius: 4px;
 }
-.list-client svg:hover, .list-client svg:focus{
-fill: var(--accent-color) ;
+
+.list-client svg{
+fill:currentColor;
+
+}
+.list-client a:hover, .list-client a:focus{
+color: var(--accent-color) ;
 border: 1px var(--accent-color) solid;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 
 .list-icon.footer svg{
 height: 20px;
@@ -374,7 +393,7 @@ border-radius: 50%;
 }
 .list-icon.footer a:hover, .list-icon.footer a:focus{
 background-color: var(--accent-color);
-    border-radius: 50%;
+border-radius: 50%;
 }
 .list-icon.footer{
 margin-top: 0;
@@ -460,8 +479,8 @@ margin-bottom: 0;
 .list-portfolio img{
 display: block;
 }
-.list-portfolio a:hover{
-box-shadow (0px 4px 4px rgba(0, 0, 0, 0.25));
+.list-portfolio li:hover{
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 .port-text{
 padding: 20px 24px;
